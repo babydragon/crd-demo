@@ -1,0 +1,24 @@
+# permissions for end users to edit blogs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: blog-editor-role
+rules:
+- apiGroups:
+  - web.helloworld
+  resources:
+  - blogs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - web.helloworld
+  resources:
+  - blogs/status
+  verbs:
+  - get

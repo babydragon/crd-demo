@@ -1,0 +1,10 @@
+domain: helloworld
+repo: helloworld/m
+resources:
+- group: web
+  kind: Blog
+  version: v1
+- group: web
+  kind: Web
+  version: v1
+version: "2"

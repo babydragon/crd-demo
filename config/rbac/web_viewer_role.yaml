@@ -1,0 +1,20 @@
+# permissions for end users to view webs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: web-viewer-role
+rules:
+- apiGroups:
+  - web.helloworld
+  resources:
+  - webs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - web.helloworld
+  resources:
+  - webs/status
+  verbs:
+  - get

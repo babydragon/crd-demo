@@ -1,0 +1,9 @@
+apiVersion: web.helloworld/v1
+kind: Web
+metadata:
+  name: web-sample
+spec:
+  # Add fields here
+  type: Blog
+  spec:
+    url: http://a.com
